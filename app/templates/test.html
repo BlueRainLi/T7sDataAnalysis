@@ -1,9 +1,9 @@
 {% extends "base.html" %}
 {% block content %}
 <div>
-    <label>character</label>
-    <select>
-        <option value="1">ハル</option>
-    </select>
+    {{form.characters.label}} {{form.characters()}} 
+    {{form.Rarity.label}} {{form.Rarity()}} 
+    {{form.Cp.label}} {{form.Cp()}}
+    {{form.submit()}}
 </div>
 {% endblock %}

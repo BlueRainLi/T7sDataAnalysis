@@ -1,7 +1,7 @@
 # -*- coding:utf-8 -*-
 import requests as re
 import hmac
-from crypto.Cipher import AES
+from Crypto.Cipher import AES
 
 BS = 16
 
@@ -64,7 +64,7 @@ def get_card_image(card_id, direction, url, header, key, iv):
 
 def main():
     url, header, key, iv = get_card_image_data_init()
-    for i in range(4200, 4230):
+    for i in range(4320, 4330):
         if not get_card_image(i, 'test/', url, header, key, iv):
             break
 
